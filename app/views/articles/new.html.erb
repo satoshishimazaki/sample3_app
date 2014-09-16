@@ -10,6 +10,14 @@
 	<th><%= f.label :title %></th>
 	<td><%= f.text_field :title %></td>
 </tr>
+<tr>
+	<th><%= f.label :content %></th>
+	<td><%= f.text_area :content %></td>
+</tr>
+
+	<p><% if @article.errors.any? %>
+	<%= @article.errors.messages[:title][0] %>
+	<% end %></p>
 
 <p><%= f.submit %></p>
 
