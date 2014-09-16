@@ -1,0 +1,16 @@
+<h1> 投稿画面</h1>
+
+<%= form_for @article do |f| %>
+
+<tr>
+	<th><%= f.label :herenowtitle %></th>
+	<td><%= f.text_field :herenowtitle %></td>
+</tr>
+<tr>
+	<th><%= f.label :title %></th>
+	<td><%= f.text_field :title %></td>
+</tr>
+
+<p><%= f.submit %></p>
+
+<% end %>
