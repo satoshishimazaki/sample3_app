@@ -1,7 +1,10 @@
 Sample3App::Application.routes.draw do
-
+  
+  resources :stores
   resources :articles
+  resources :sessions, only: [:new, :create, :destroy]
   root 'articles#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
