@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140916120734) do
+ActiveRecord::Schema.define(version: 20140917171838) do
 
   create_table "articles", force: true do |t|
     t.string   "title",        null: false
@@ -22,5 +22,18 @@ ActiveRecord::Schema.define(version: 20140916120734) do
     t.string   "herenowtitle"
     t.string   "content"
   end
+
+  create_table "stores", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "address"
+    t.integer  "tell"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+  end
+
+  add_index "stores", ["email"], name: "index_stores_on_email", unique: true
 
 end
